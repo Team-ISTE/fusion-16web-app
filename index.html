@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fusion 16 is techfest of ISTE BVM.">
+    <meta name="Team ISTE" content="webteam.fusion@gmail.com">
+    <title>Fusion'16</title>
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+	  <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
+    <!-- simple style -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.6.14.min.js"></script>
+    <style type="text/css">
+      #response { display:none; padding: 2px;}
+      .success { background-color: #444000;}
+      .error { background-color: #444000;}
+    </style>
+  </head>
+  <body>
+	<div id="wrapper">
+		<div class="container">
+			<div class="row">
+           <div class="col-sm-12 col-md-12 col-lg-12">
+            <center>
+              <img src="assets/img/drawing .png"/>
+            </center>
+
+              <svg width="300" height="300" viewBox="0 0 1000 1000"
+               xmlns="http://www.w3.org/2000/svg" version="1.1"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g transform="translate(500,500)">
+                <rect class="rotate-45 rotate-back" x=-5 y=-5 width=10 height=10 stroke="white" stroke-width=20 fill="none"/>
+                <rect class="rotate-45 rotate" x=-50 y=-50 width=100 height=100 stroke="white" stroke-width=20 stroke-linejoin="bevel" fill="none"/>
+                <g transform="translate(-50,0) rotate(-45)"><polyline class="left" points="40,-40 50,-50 -40,-50 -50,-40 -50,50 -40,40" stroke="black" stroke-width=20 fill="none"/></g>
+                <g transform="translate(50,0) rotate(135)"><polyline class="right" points="40,-40 50,-50 -40,-50 -50,-40 -50,50 -40,40" stroke="black" stroke-width=20 fill="none"/></g>
+                <text y=-140 text-anchor="middle" font-weight="bold" font-size="3em" font-family="sans-serif">Development in Process</text>
+                <text y=400 text-anchor="middle" font-weight="bold" font-size="3em" font-family="sans-serif">Countdown Starts Stay Tuned...</text>
+
+              </g>
+            </svg>
+	        	<div id="countdown">
+                <div id="days"></div>
+                <div id="hours"></div>
+                <div id="minutes"></div>
+                <div id="seconds"></div>
+          </div>
+          <form class="form-inline"   id ="myForm" >
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email address" name="email">
+                </div>
+              <button type="submit"  class="btn btn-theme">Get notified about Updates!</button>
+              <h2 id="subtitle"></h2>
+          </form> 	
+				</div>
+			</div>
+	 </div>
+
+    <script src="assets/js/counter.js"></script>
+    <script type="text/javascript">
+function makeTimer() {
+      var endTime = new Date("Januarary 25, 2016 02:31 :00 GMT");     
+      var endTime = (Date.parse(endTime)) / 1000;
+      var now = new Date();
+      var now = (Date.parse(now) / 1000);
+      var timeLeft = endTime - now;
+      var days = Math.floor(timeLeft / 86400); 
+      var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+      var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+      var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+      if (hours < "10") { hours = "0" + hours; }
+      if (minutes < "10") { minutes = "0" + minutes; }
+      if (seconds < "10") { seconds = "0" + seconds; }
+      if(timeLeft< "0")
+      {
+        $("#days").html("The ");
+        $("#hours").html( "Vision");
+        $("#minutes").html( "Leaps");
+        $("#seconds").html( "Ahead");    
+      }
+      else
+      {
+        $("#days").html(days + "<span>Days</span>");
+        $("#hours").html(hours + "<span>Hours</span>");
+        $("#minutes").html(minutes + "<span>Minutes</span>");
+        $("#seconds").html(seconds + "<span>Seconds</span>");   
+  
+      }
+        
+}
+setInterval(function() { makeTimer(); }, 1000);
+
+    </script>
+  </body>
+</html>
+
+      
