@@ -1,44 +1,31 @@
-
-$(document).ready(function(){
-
-  // Setup the form to watch for the submit event
-         $('#myForm').submit(function(e){
-              e.preventDefault();
-              //alert('In function block');
-              // Grab the elements from the form to make up
-              // an object containing name, email and message
-              var data = { 
-                email: document.getElementById('email').value,
-              }
-               // Initialize Parse with your Parse application & javascript keys
-              Parse.initialize("qrfE5XPrF0T012QJR9VHTufDsyd9YGW1JKmgrxF2", "GCo5n6P82NhYnroObWWQWKCexeahJqseSKPLJh5W");
-              var TestObject = Parse.Object.extend("TestObject");
-              var testObject = new TestObject();
-              testObject.set("email",data);
-              testObject.save(null, {
-                  success: function(TestObject) {
-                  // Execute any logic that should take place after the object is saved.
-                  // Run our Parse Cloud Code and 
-                  // pass our 'data' object to it
-                  Parse.Cloud.run("mail", data, {
-                    success: function(object) {
-                      $('#subtitle').html('Thanks for subscribing!').addClass('show').fadeIn('fast');
-                    },
-
-                    error: function(object, error) {
-                      console.log(error);
-                      $('#subtitle').html('Oops Something went wrong! Do try again!').addClass('show').fadeIn('fast');
-                      }
-                    });
-                  },
-                  error: function(TestObject, error) {
-                    // Execute any logic that should take place if the save fails.
-                    // error is a Parse.Error with an error code and message.
-                    alert('Failed to create new object, with error code: ' + error.message);
-                  }
-            });
-        });             
-  });
+function makeTimer() {
+      var endTime = new Date("Feburary 8, 2016 02:31 :00 GMT");     
+      var endTime = (Date.parse(endTime)) / 1000;
+      var now = new Date();
+      var now = (Date.parse(now) / 1000);
+      var timeLeft = endTime - now;
+      var days = Math.floor(timeLeft / 86400); 
+      var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+      var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+      var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+      if (hours < "10") { hours = "0" + hours; }
+      if (minutes < "10") { minutes = "0" + minutes; }
+      if (seconds < "10") { seconds = "0" + seconds; }
+      if(timeLeft< "0")
+      {
+        $("#days").html("The ");
+        $("#hours").html( "Vision");
+        $("#minutes").html( "Leaps");
+        $("#seconds").html( "Ahead");    
+      }
+      else
+      {
+        $("#days").html(days + "<span>Days</span>");
+        $("#hours").html(hours + "<span>Hours</span>");
+        $("#minutes").html(minutes + "<span>Minutes</span>");
+        $("#seconds").html(seconds + "<span>Seconds</span>");   
   
-
-  
+      }
+        
+}
+setInterval(function() { makeTimer(); }, 1000);
