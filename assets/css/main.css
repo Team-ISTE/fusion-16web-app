@@ -1,6 +1,6 @@
 #fusionlogo{
   margin-left: 35%;
-  margin-top:1%; 
+  margin-top:1%;
 }
 
 nav{
@@ -16,6 +16,66 @@ nav{
   margin-left: 0px;
   margin-right: 0px;
 }
+/* countdown  section*/
+#section2{
+  height: 100px;
+  background-color: #0D47A1;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+/* countdown */
+#countdown {
+	font-size: 48px;
+	color: #fff;
+	line-height: 1.1em;
+}
+#days {
+   display: inline-block;
+   line-height: 1;
+   padding: 20px;
+   font-size: 70px;
+   color: #fff;
+}
+#days span
+{
+   font-size: 40px;
+}
+#hours {
+  display: inline-block;
+  line-height: 1;
+  padding: 20px;
+  font-size: 50px;
+  color: #fff;
+}
+
+#hours span
+{
+   font-size: 20px;
+}
+#minutes {
+  display: inline-block;
+  line-height: 1;
+  padding: 20px;
+  font-size: 30px;
+  color: #fff;
+}
+
+#minutes span
+{
+   font-size: 15px;
+}
+#seconds {
+ display: inline-block;
+ line-height: 1;
+ padding: 20px;
+ font-size: 25px;
+ color: #fff;
+}
+#seconds span
+{
+   font-size: 10px;
+}
+
 
 #fusiongif{
   margin-top: 80px;
@@ -118,7 +178,7 @@ text {
 
 .svg-masked-text {
   fill: black;
-  font-size: 20px;  
+  font-size: 20px;
 }
 
 image {
@@ -301,7 +361,7 @@ button.light {
 
 #team1{
   background-color: #d81;
-  font-size: 25px;  
+  font-size: 25px;
   letter-spacing: 2px;
   color: white;
 }
@@ -312,5 +372,5 @@ button.light {
 
 #teaminfo{
   font-size: 30px;
-  
+
 }

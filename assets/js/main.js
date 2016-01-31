@@ -1,3 +1,4 @@
+
 var items = []
   , point = document.querySelector('svg').createSVGPoint();
 
@@ -48,8 +49,8 @@ Item.prototype = {
 
  $(document).ready(function(){
       $('.slider').slider();
-       $('.modal-trigger').leanModal();
-       $('#team1').click(function(){
+      $('.modal-trigger').leanModal();
+      $('#team1').click(function(){
           swal({
             html: true,
             imageUrl:"../img/team-icon.png",
@@ -59,32 +60,54 @@ Item.prototype = {
             showConfirmButton: false,
           });
        });
-var myCenter=new google.maps.LatLng(22.552334,72.923217);
-              var marker;
-              function initialize()
-              {
+        var myCenter=new google.maps.LatLng(22.552334,72.923217);
+        var marker;
+        function initialize()
+            {
               var mapProp = {
                 center:myCenter,
-                zoom:5,
+                zoom:15,
                 mapTypeId:google.maps.MapTypeId.ROADMAP
-                };
-
+              };
               var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
               var marker=new google.maps.Marker({
                 position:myCenter,
                 animation:google.maps.Animation.BOUNCE
                 });
-
               marker.setMap(map);
               }
-
               google.maps.event.addDomListener(window, 'load', initialize);
+
+
     });
+    function makeTimer() {
+          var endTime = new Date("Feburary 8, 2016 02:31 :00 GMT");
+          var endTime = (Date.parse(endTime)) / 1000;
+          var now = new Date();
+          var now = (Date.parse(now) / 1000);
+          var timeLeft = endTime - now;
+          var days = Math.floor(timeLeft / 86400);
+          var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+          var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+          var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+          if (hours < "10") { hours = "0" + hours; }
+          if (minutes < "10") { minutes = "0" + minutes; }
+          if (seconds < "10") { seconds = "0" + seconds; }
+          if(timeLeft< "0")
+          {
+            $("#days").html("The ");
+            $("#hours").html( "Fusion");
+            $("#minutes").html( "Leaps");
+            $("#seconds").html( "Ahead");
+          }
+          else
+          {
+            $("#days").html(days + "<span>Days</span>");
+            $("#hours").html(hours + "<span>Hours</span>");
+            $("#minutes").html(minutes + "<span>Minutes</span>");
+            $("#seconds").html(seconds + "<span>Seconds to go...</span>");
 
+          }
 
-  
-
-
-
-        
+    }
+    setInterval(function() { makeTimer(); }, 1000);
