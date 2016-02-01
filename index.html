@@ -7,27 +7,13 @@
     <meta name="description" content="Fusion'16 is techfest of Student Chapter's of Birla Vishvarkarma Mahavidhalaya.">
     <meta name="Team ISTE" content="webteam.fusion@gmail.com">
     <title>Fusion'16</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/manifest.json">
+     <link rel="manifest" href="assets/img/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/img/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-	  <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
-    <!-- simple style -->
+	  <!-- simple style -->
     <link href="assets/css/styles.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -39,29 +25,17 @@
     <script src="https://www.parsecdn.com/js/parse-1.6.14.min.js"></script>
   </head>
   <body>
-  <canvas id="canvas">This browser doesn't support canvas</canvas>  
+  <canvas id="canvas">This browser doesn't support canvas</canvas> 
 	<div id="wrapper">
 		<div class="container">
 			<div class="row">
            <div class="col-sm-12 col-md-12 col-lg-12">
             <center>
-              <img src="assets/img/logo.png"/>
+              <img src="assets/img/combined.png"/>
             </center>
-
-              <svg width="300" height="300" viewBox="0 0 1000 1000"
-               xmlns="http://www.w3.org/2000/svg" version="1.1"
-               xmlns:xlink="http://www.w3.org/1999/xlink">
-              <g transform="translate(500,500)">
-                <rect class="rotate-45 rotate-back" x=-5 y=-5 width=10 height=10 stroke="white" stroke-width=20 fill="none"/>
-                <rect class="rotate-45 rotate" x=-50 y=-50 width=100 height=100 stroke="white" stroke-width=20 stroke-line join="bevel" fill="none"/>
-                <g transform="translate(-50,0) rotate(-45)"><polyline class="left" points="40,-40 50,-50 -40,-50 -50,-40 -50,50 -40,40" stroke="red" stroke-width=20 fill="none"/></g>
-                <g transform="translate(50,0) rotate(135)"><polyline class="right" points="40,-40 50,-50 -40,-50 -50,-40 -50,50 -40,40" stroke="red" stroke-width=20 fill="none"/></g>
-                
-                <text y=-140 text-anchor="middle" fill="red" font-weight="bold" font-size="3em" font-family="sans-serif">Development in Process</text>
-                <text y=400 text-anchor="middle" fill="white" font-weight="bold" font-size="3em" font-family="sans-serif">Countdown Starts Stay Tuned...</text>
-
-              </g>
-            </svg>
+            <div id="nextbt">
+              <a href="assets/views/home.html"><button type="button" class="btn btn-success">Enter the Website</button></a>
+            </div>
 	        	<div id="countdown">
                 <div id="days"></div>
                 <div id="hours"></div>
@@ -78,6 +52,14 @@
 				</div>
 			</div>
 	 </div>
+  </div>
+  <style>
+    #nextbt{
+      font-size: 30px;
+      letter-spacing: 2px;
+      margin-top: 5%; 
+    }
+  </style>
    <!-- Scripts for the page-->
     <script src="assets/js/output.min.js"></script>
     <!--script src="assets/js/email.js"></script>

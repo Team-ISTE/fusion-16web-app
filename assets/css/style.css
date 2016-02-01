@@ -118,7 +118,7 @@ form.signup input.form-control:focus {
 #response { display:none; padding: 2px;}
 .success { background-color: #444000;}
 .error { background-color: #444000;}
-   
+
  #canvas{
     opacity:0.4;
     width: 200%;
@@ -136,7 +136,7 @@ form.signup input.form-control:focus {
 	text-align: center;
 	background-attachment: relative;
 	background-position: center center;
-	width: 100%;	
+	width: 100%;
  // min-height: 650px;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -169,7 +169,7 @@ img{
 #days {
    display: inline-block;
    line-height: 1;
-   padding: 20px;  
+   padding: 20px;
    font-size: 70px;
    color: #fff;
 }
@@ -180,7 +180,7 @@ img{
 #hours {
   display: inline-block;
   line-height: 1;
-  padding: 20px;  
+  padding: 20px;
   font-size: 50px;
   color: #fff;
 }
@@ -255,6 +255,4 @@ p.copyright {
 	margin-top: 40px;
 	color: #fff;
 	text-align: center;
-}	
-
-      
+}
